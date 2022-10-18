@@ -74,7 +74,10 @@ const Todo = () => {
             </div>
             <div className="col-md-2 mt-2">
               {isUpdate ? (
-                <button className="btn btn-warning " onClick={UpdateHandeler}>
+                <button
+                  className="btn btn-warning form-control"
+                  onClick={UpdateHandeler}
+                >
                   Update Data
                 </button>
               ) : (
@@ -102,28 +105,29 @@ const Todo = () => {
               ) : (
                 info.map((item, index) => {
                   return (
-                    <>
-                      <div key={index} className="row mt-1 ml-2">
-                        <div className="col-6">
-                          <p className="text-white">
-                            <span className="text-danger">{index + 1} </span>
-                            {item}
-                          </p>
-                        </div>
-                        <div className="col-3">
-                          <i
-                            onClick={() => removeHandler(index)}
-                            className="fa-solid fa-trash text-danger cursor-pointer"
-                          ></i>
-                        </div>
-                        <div className="col-3">
-                          <i
-                            onClick={() => editHandeler(index)}
-                            className="fa-solid fa-pen-to-square text-warning"
-                          ></i>
-                        </div>
+                    <div
+                      key={index}
+                      className="row ml-2 py-2 align-items-center"
+                    >
+                      <div className="col-6 ">
+                        <p className="text-white p-0 m-0">
+                          <span className="text-danger">{index + 1} </span>
+                          {item}
+                        </p>
                       </div>
-                    </>
+                      <div className="col-3">
+                        <i
+                          onClick={() => removeHandler(index)}
+                          className="fa-solid fa-trash text-danger cursor-pointer"
+                        ></i>
+                      </div>
+                      <div className="col-3">
+                        <i
+                          onClick={() => editHandeler(index)}
+                          className="fa-solid fa-pen-to-square text-warning"
+                        ></i>
+                      </div>
+                    </div>
                   );
                 })
               )}
