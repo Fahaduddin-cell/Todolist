@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,22 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+i{
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: large;
+}
+p{
+  font-size: large;
+  color: black;
+  font-weight: bold;
+}
+
+.bgcolor{
+  background: rgb(69,65,135);
+  background: linear-gradient(90deg, rgba(69,65,135,1) 0%, rgba(196,48,191,1) 25%, rgba(0,212,255,0.6530987394957983) 62%);
+border-radius: 0px 20px 0px 20px;
 }
